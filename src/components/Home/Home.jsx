@@ -48,7 +48,8 @@ const Home = () => {
       className="bg-cover bg-center h-screen w-full">
 
       {/* Hero Section */}
-      <section className=" flex flex-col md:flex-row items-center justify-evenly px-8 py-12 bg-transparent">
+      <section 
+      className=" flex flex-col md:flex-row items-center justify-evenly px-8 py-12 bg-transparent">
         {/* Image */}
         <div className="md:w-1/2 flex justify-center">
           <img
@@ -63,7 +64,7 @@ const Home = () => {
             Proffesional Family Health Care
           </h1>
 
-          <p className="text-white mb-6">Create your medical website using Jevelin </p>
+          <p className="text-white mb-6">Your trusted digital clinic — book appointments, consult with doctors, and manage your health anytime, anywhere with our smart healthcare app. </p>
           <div className="flex space-x-4 justify-center gap-3 md:justify-start">
             <div className="bg-green-100 p-3 rounded-full text-2xl text-green-600 font-bold">❤️</div>
             <div className="bg-green-100 p-3 rounded-full text-2xl text-green-600 font-bold">🏥</div>
@@ -75,33 +76,46 @@ const Home = () => {
       </section>
 
       {/* Info Cards */}
-      <section className="flex items-center flex-wrap justify-evenly bg-transparent w-full h-60">
-        {cardInfo.map((card, index) => (
-          <div
-            key={index}
-            className="bg-blue-100 rounded-xl p-6 text-center w-100 h-40 shadow hover:shadow-lg transition "
-          >
-            {card.icon}
-            <h3 className="text-xl font-bold mt-4 text-blue-700">{card.title}</h3>
-            {card.subtitle && (
-              <p className="text-gray-600 mt-2">{card.subtitle}</p>
-            )}
-            {card.text && (
-              <p className="text-gray-500 mt-1">{card.text}</p>
-            )}
+     <section className="w-full py-10 bg-transparent border flex justify-center">
+  <div className="max-w-8xl w-full mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 border">
+    {cardInfo.map((card, index) => (
+      <div
+        key={index}
+        className="bg-blue-100 rounded-xl p-6 text-center shadow-md hover:shadow-xl transition duration-300"
+      >
+        {/* Icon */}
+        <div className="mb-4">{card.icon}</div>
 
-            {card.button.link ? (
-              <NavLink to={card.button.link}>
-                <button className={card.button.className}>{card.button.label}</button>
-              </NavLink>
-            ) : (
-              <button className={`mt-4 ${card.button.className}`}>
-                {card.button.label}
-              </button>
-            )}
-          </div>
-        ))}
-      </section>
+        {/* Title */}
+        <h3 className="text-xl font-bold text-blue-700">{card.title}</h3>
+
+        {/* Subtitle */}
+        {card.subtitle && (
+          <p className="text-gray-600 mt-2">{card.subtitle}</p>
+        )}
+
+        {/* Text */}
+        {card.text && (
+          <p className="text-gray-500 mt-1">{card.text}</p>
+        )}
+
+        {/* Button */}
+        {card.button.link ? (
+          <NavLink to={card.button.link}>
+            <button className={`mt-4 px-4 py-2 rounded text-white ${card.button.className}`}>
+              {card.button.label}
+            </button>
+          </NavLink>
+        ) : (
+          <button className={`mt-4 px-4 py-2 rounded text-white ${card.button.className}`}>
+            {card.button.label}
+          </button>
+        )}
+      </div>
+    ))}
+  </div>
+</section>
+
 
     </div>
   );

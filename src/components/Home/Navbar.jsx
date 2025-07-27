@@ -69,7 +69,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="md:hidden">
+      <div className="md:hidden  text-white">
         <button onClick={() => setMenuOpen(!menuOpen)} className="focus:outline-none">
           {menuOpen ? <FiX size={28} /> : <FiAlignJustify size={28} />}
         </button>
