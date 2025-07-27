@@ -45,7 +45,7 @@ const Home = () => {
   return (
     <div
       style={{ backgroundImage: `url(${bgImage})` }}
-      className="bg-cover bg-center h-screen w-full">
+      className="bg-cover bg-center min-h-screen w-full overflow-y-auto">
 
       {/* Hero Section */}
       <section 
@@ -76,12 +76,12 @@ const Home = () => {
       </section>
 
       {/* Info Cards */}
-     <section className="w-full py-10 bg-transparent border flex justify-center">
+     <section className="w-full h-40 py-10 bg-transparent  flex justify-center ">
   <div className="max-w-8xl w-full mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
     {cardInfo.map((card, index) => (
       <div
         key={index}
-        className="bg-blue-100 rounded-xl p-6 text-center shadow-md hover:shadow-xl transition duration-300"
+        className="bg-blue-100 h-40  rounded-xl p-6 text-center shadow-md hover:shadow-xl transition duration-300"
       >
         {/* Icon */}
         <div className="mb-4">{card.icon}</div>
