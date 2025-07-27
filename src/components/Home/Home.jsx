@@ -81,7 +81,7 @@ const Home = () => {
     {cardInfo.map((card, index) => (
       <div
         key={index}
-        className="bg-blue-100 h-40  rounded-xl p-6 text-center shadow-md hover:shadow-xl transition duration-300"
+        className="bg-blue-100 h-40  rounded-xl p-6 flex flex-col border shadow-md hover:shadow-xl transition duration-300 justify-center items-center text-center"
       >
         {/* Icon */}
         <div className="mb-4">{card.icon}</div>
