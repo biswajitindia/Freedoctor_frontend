@@ -45,7 +45,7 @@ const Home = () => {
   return (
     <div
       style={{ backgroundImage: `url(${bgImage})` }}
-      className="bg-cover bg-center min-h-screen w-full overflow-y-auto">
+      className="bg-cover bg-center min-h-screen w-full overflow-y-auto rep">
 
       {/* Hero Section */}
       <section 
